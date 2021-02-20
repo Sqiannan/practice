@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+
+}
+.cn{
+    width: 100%;
+    height: 100%;
+}
+iframe{
+    width: 100%;
+    height: calc(100vh - 58px);
+}
+.main_btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    height: 58px;
+    background: #fff;
+}
+.main_btn .iconfont{
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #5bb5f5;
+
+}
+.main_btn p{
+    color: #5bb5f5;
+    font-size: 14px;
+}

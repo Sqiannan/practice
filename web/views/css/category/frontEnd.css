@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    margin: 14px 2px 14px 17px;
+    font-family: 微软雅黑;
+}
+li{
+    list-style: none;
+}
+.title,.raise{
+    height: 20px;
+    line-height: 20px;
+    font-size: 18px;
+    color: #28abfc;
+}
+.raise{
+    font-weight: bold;
+}
+.class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    margin: 12px 0;
+    height: 86px;
+    background: url(../../images/web_fe.png);
+    background-size: 100% 100%;
+}
+.btn_list{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.list_item{
+    margin: 20px 10px 0 0;
+    float: left;
+    padding: 0 16px;
+    height: 36px;
+    line-height: 36px;
+    color: #c0c0c0;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../node_modules/layui-src/dist/css/layui.css">
+  <link rel="stylesheet" href="css/category.css">
+  <script src="../node_modules/layui-src/dist/layui.js"></script>
+</head>
+
+<body>
+  <!-- 头部开始 -->
+  <div class="header">
+    <img class="header_logo" src="../views/images/logo.png" alt="">
+    <div class="header_text">课程分类</div>
+  </div>
+  <!-- 头部结束 -->
+  <!-- 导航栏开始 -->
+  <div class="category">
+    <ul class="layui-nav layui-nav-tree ">
+      <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+      <li class="layui-nav-item layui-nav-itemed layui-this">
+        <a href="category/frontEnd.html" target="fm">前端</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="category/miniApp.html" target="fm">微信小程序</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="category/vue.html" target="fm">Vue.js</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="category/mobile.html" target="fm">移动web开发</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="category/bootstrap.html" target="fm">bootstrap</a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="category/node.html" target="fm">Node.js</a>
+      </li>
+    </ul>
+    <div class="content">
+      <!-- 内容主体区域 -->
+      <iframe name="fm" src="category/frontEnd.html" frameborder="0"></iframe>
+    </div>
+  </div>
+   <!-- 导航栏开始 -->
+  <script>
+    layui.use('element', function () {
+      var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+      //监听导航点击
+      element.on('nav(demo)', function (elem) {
+        //console.log(elem)
+        layer.msg(elem.text());
+      });
+    });
+  </script>
+</body>
+
+</html>

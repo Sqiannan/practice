@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2373252_etpqftbb65c.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- 导入 jQuery -->
+  <script src="js/jquery.js"></script>
+  <!-- 导入模板引擎 -->
+  <script src="js/template-web.js"></script>
+    <title>博学谷</title>
+</head>
+
+<body>
+    <!-- 头部开始 -->
+    <div class="header">
+        <img class="email" src="../views/images/邮件.png" alt="">
+        <img class="header_logo" src="../views/images/headerLogo.png" alt="">
+        <div class="iconfont icon-sousuo search"></div>
+    </div>
+    <!-- 头部结束 -->
+    <!-- banner开始 -->
+    <div class="banner"></div>
+    <!-- banner结束 -->
+    <!-- 就业课开始 -->
+    <div class="employment">
+        <p class="course_title">就业课</p>
+        <ul class="course_list">
+            <li><img src="../views/images/fe-list.png" alt=""></li>
+            <li><img src="../views/images/java.png" alt=""></li>
+            <li><img src="../views/images/data.png" alt=""></li>
+            <li><img src="../views/images/python.png" alt=""></li>
+            <li><img src="../views/images/ui.png" alt=""></li>
+            <li><img src="../views/images/fe-list.png" alt=""></li>
+
+        </ul>
+    </div>
+    <!-- 就业课结束 -->
+    <!-- 微课开始 -->
+    <div class="micro">
+        <p class="course_title">微课</p>
+        <ul class="micro_list">
+            <li>
+                <div class="micro_img">
+                    <img src="../views/images/ui.png" alt="">
+                </div>
+                <div class="micro_content">
+                    <div class="micro_title">微信小程序</div>
+                    <div class="detail">
+                        <div class="number"><span>22</span>人学习</div>
+                        <div class="price">￥<span>22</span></div>
+                    </div>
+                    
+                </div>
+                
+            </li>
+            <li>
+                <div class="micro_img">
+                    <img src="../views/images/ui.png" alt="">
+                </div>
+                <div class="micro_content">
+                    <div class="micro_title">微信小程序</div>
+                    <div class="detail">
+                        <div class="number"><span>22</span>人学习</div>
+                        <div class="price">￥<span>22</span></div>
+                    </div>
+                    
+                </div>
+                
+            </li>
+            <li>
+                <div class="micro_img">
+                    <img src="../views/images/ui.png" alt="">
+                </div>
+                <div class="micro_content">
+                    <div class="micro_title">微信小程序</div>
+                    <div class="detail">
+                        <div class="number"><span>22</span>人学习</div>
+                        <div class="price">￥<span>22</span></div>
+                    </div>
+                    
+                </div>
+                
+            </li>
+            <li>
+                <div class="micro_img">
+                    <img src="../views/images/ui.png" alt="">
+                </div>
+                <div class="micro_content">
+                    <div class="micro_title">微信小程序</div>
+                    <div class="detail">
+                        <div class="number"><span>22</span>人学习</div>
+                        <div class="price">￥<span>22</span></div>
+                    </div>
+                    
+                </div>
+                
+            </li>
+        </ul>
+
+    </div>
+    <div id="tb"></div>
+    <script>
+        
+        // $.ajax({
+        //     type: 'GET', 
+        //   url: 'http://127.0.0.1:3001/getAllCourse',
+        // //   dataType: 'jsonp',
+        //   success: function (res) {
+        //     console.log(res)
+        //     var rows = []
+        //   $.each(res.data, function (i, item) {
+        //     rows.push('<tr><td>' + item.name + '</td><td>' + item.count + '</td><td>' + item.price + '</td><td>' + item.img + '</td></tr>')
+        //   })
+        //   $('#tb').empty().append(rows.join(''))
+        //     // renderSuggestList(res)
+        //   }
+          
+        // })
+        $.get('http://127.0.0.1:3001/getAllCourse', function(res) {
+        // 2. 获取列表数据是否成功
+        // console.log(res)
+        // if (res.status !== 200) return alert('获取列表失败！')
+        // 3. 渲染页面结构
+        var rows = []
+        $.each(res.data, function(i, item) { // 4. 循环拼接字符串
+            console.log(res);
+                        rows.push('<tr><td>' + item.name + '</td><td>' + item.count + '</td><td>' + item.price + '</td><td>' + item.img + '</td></tr>')
+
+        })
+        $('#tb').empty().append(rows.join('')) // 5. 渲染表格结构
+    })
+
+    </script>
+    <!-- 微课结束 -->
+</body>
+</html>
